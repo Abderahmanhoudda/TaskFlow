@@ -1,0 +1,53 @@
+# ============================================================
+# TaskFlow - root ignore rules (apply to server/ and client/)
+# ============================================================
+
+# Dependencies
+node_modules/
+
+# Environment & secrets (keep the committed template)
+.env
+.env.*
+!.env.example
+
+# SQLite databases - local account/test data, never committed
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Build output
+dist/
+dist-ssr/
+build/
+
+# Test & tooling artifacts
+test-results/
+playwright-report/
+coverage/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor / OS files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local overrides
+*.local
